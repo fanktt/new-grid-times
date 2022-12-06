@@ -52,7 +52,7 @@ const Abstract = styled.p`
   -webkit-line-clamp: var(--more-line);
   overflow: hidden;
   
-  @media ${QUERIES.tabletAndUp} {
+  @media ${QUERIES.tabletOnly} {
     -webkit-line-clamp: calc(var(--more-line) * 2);
   }
 `;
