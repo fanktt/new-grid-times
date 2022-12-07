@@ -149,7 +149,7 @@ const TopRow = styled.div`
   @media ${QUERIES.tabletAndUp} {
     flex-direction: row;
     justify-content: center;
-    gap: 32px;
+    gap: 48px;
   }
 
   @media ${QUERIES.laptopAndUp} {
@@ -184,9 +184,9 @@ const MainNavArea = styled.div`
   
   @media ${QUERIES.tabletAndUp} {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 240px);
-    justify-content: space-between;
-    text-align: start;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    flex-direction: revert;
+    text-align: left;
   }
 `;
 
