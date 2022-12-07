@@ -42,18 +42,22 @@ const Heading = styled.h2`
 `;
 
 const Abstract = styled.p`
-  --more-line: 8;
   font-size: 1rem;
   margin-bottom: 1em;
   white-space: pre-wrap;
 
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: var(--more-line);
+  -webkit-line-clamp: 16;
+  /* Necessary for line-clamping */
   overflow: hidden;
   
-  @media ${QUERIES.tabletOnly} {
-    -webkit-line-clamp: calc(var(--more-line) * 2);
+  @media ${QUERIES.tabletAndUp} {
+    -webkit-line-clamp: 16;
+  }
+  
+  @media ${QUERIES.laptopAndUp} {
+    -webkit-line-clamp: 10; 
   }
 `;
 
