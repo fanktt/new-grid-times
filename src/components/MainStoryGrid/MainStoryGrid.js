@@ -64,20 +64,19 @@ const Wrapper = styled.div`
     grid-template-columns: 2fr 1fr;
     grid-template-areas:
       'main-story secondary-stories'
-      'main-story secondary-stories'
       'advertisement advertisement'
       'opinion-stories opinion-stories';
-    gap: 0;
+    gap: 48px 0;
   }
   
   @media ${QUERIES.laptopAndUp} {
-    grid-template-columns: 500px 1.5fr 1fr;
+    grid-template-columns: 5fr 4fr 3fr;
     grid-template-areas:
-      'main-story secondary-stories opinion-stories'
       'main-story secondary-stories opinion-stories'
       'main-story advertisement advertisement';
     gap: 0;
   }
+  
 `;
 
 const MainStorySection = styled.section`
@@ -97,6 +96,8 @@ const SecondaryStorySection = styled.section`
 
   @media ${QUERIES.laptopAndUp} {
     padding-right: 16px;
+    margin-right: 16px;
+    border-right: 1px solid var(--color-gray-300);
   }
 `;
 
@@ -115,8 +116,8 @@ const OpinionSection = styled.section`
   grid-area: opinion-stories;
   
   @media ${QUERIES.laptopAndUp} {
-    padding-left: 16px;
-    border-left: 1px solid var(--color-gray-300);
+    /* visual alignment */
+    margin-top: -8px;
   }
 `;
 
@@ -138,8 +139,6 @@ const OpinionDivider = styled.div`
 
 const AdvertisementSection = styled.section`
   grid-area: advertisement;
-  padding-top: 48px;
-  padding-bottom: 48px;
 
   @media ${QUERIES.laptopAndUp} {
     border-top: 1px solid var(--color-gray-300);
